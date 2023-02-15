@@ -9,12 +9,12 @@ namespace BikersX.Controllers
     [ApiController]
     public class BaseController : ControllerBase
     {
-        public IUnitOfWork _unitOfWork { get; set; }
-        public IMapper mapper { get; set; }
+        public IUnitOfWork _unitOfWork;
+        public readonly IMapper _mapper;
         public BaseController(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
-            this.mapper = mapper;
+            _mapper = mapper;
         }
 
        

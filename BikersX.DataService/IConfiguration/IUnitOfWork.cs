@@ -10,6 +10,8 @@ namespace BikersX.DataService.IConfiguration
     public interface IUnitOfWork
     {
         IVendorRepository Vendor { get; }
+        IBillRepository Bill { get; }
+        IUpdateHistoryRepository UpdateHistory { get; }
         Task CompleteAsync();
     }
 }

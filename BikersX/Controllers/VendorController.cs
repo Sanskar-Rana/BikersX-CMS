@@ -52,7 +52,7 @@ namespace BikersX.Controllers
         }
 
         [HttpGet("[action]")]
-        public async Task<IActionResult> GetVendorByGuid([FromQuery] Guid id)
+        public async Task<IActionResult> GetVendorByGuid([FromQuery] int id)
         {
             var data = _unitOfWork.Vendor.GetById(id);
             if (data == null)

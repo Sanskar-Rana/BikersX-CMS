@@ -31,7 +31,7 @@ namespace BikersX.DataService.Repository
             return PagedList<T>.ToPagedList(dbSet, parameters.PageNumber, parameters.PageSize);
         }
 
-        public async Task<T> GetById(Guid id)
+        public async Task<T> GetById(int id)
         {
             return await dbSet.FindAsync(id);
         }

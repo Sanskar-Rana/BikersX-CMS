@@ -20,9 +20,15 @@ namespace BikersX.DataService.Data
             _db = db;
             _logger = loggerFactory.CreateLogger("db_logs"); ;
             Vendor = new VendorRepository(_db,_logger);
+            Bill = new BillRepository(_db,_logger);
+            UpdateHistory = new UpdateHistoryRepository(_db,_logger);
         }
 
         public IVendorRepository Vendor { get; set; }
+
+        public IBillRepository Bill { get; set; }
+
+        public IUpdateHistoryRepository UpdateHistory { get; set; }
 
         public async Task CompleteAsync()
         {

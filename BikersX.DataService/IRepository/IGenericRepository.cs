@@ -15,7 +15,7 @@ namespace BikersX.DataService.IRepository
         Task<PagedList<T>> GetAll(GenericParameters parameters);
 
         //Get specifice entity based on Id
-        Task<T> GetById(Guid id);
+        Task<T> GetById(int id);
         Task<bool> AddEntity(T entity);
         Task<bool> Delete(T entity);
 
